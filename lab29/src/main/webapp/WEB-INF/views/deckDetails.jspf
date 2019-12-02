@@ -1,0 +1,24 @@
+<c:if test='${ pageContext.session.getAttribute("deck") != null }'>
+	<div class="jumbotron">
+		
+		<div class="container">	
+			<h1> Deck ${ pageContext.session.getAttribute("deck").getDeck_id() }</h1>
+		</div>
+		
+		<div class="container">
+			<table class="table">
+				<tbody>
+					<tr>
+						<td>Shuffled?</td>
+						<td>${ pageContext.session.getAttribute("deck").isShuffled() }</td>	
+					</tr>
+					<tr>
+						<td>Cards Remaining</td>
+						<td>${ pageContext.session.getAttribute("deck").getRemaining() }</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	
+	</div>
+</c:if>

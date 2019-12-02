@@ -1,0 +1,6 @@
+<c:if test='${ pageContext.session.getAttribute("error").hasError() }'>
+	<div class="page-header bg-danger">
+		<h1>Error</h1>
+		<p>'${ pageContext.session.getAttribute("error").consumeError() }'</p>
+	</div>
+</c:if>
